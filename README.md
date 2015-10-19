@@ -17,7 +17,7 @@ _by <Issam Djadja>_
 
 ---
 ## Initial Setup
-In order to setup git on your workspace their needs to be a few steps you must follow.   
+In order to setup git on your workspace their needs to be a few steps you must follow.  
 1) First, you have to tell Git your name so all your `commits` (snapshots) are labled properly. 
 2) 
 
