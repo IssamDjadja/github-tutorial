@@ -42,11 +42,47 @@ Are you sure you want to continue connecting (yes/no)?` just type **yes**.
 provide shell access.`  
 10) Congrats you created your own SSH key, give yourself some snaps for that. 
 
-
-
-
 ---
 ## Repository Setup
+The `git init` command creates a brand new git repository. This may be used to transform a known project into a Git repository. This is the very first command you type in **in order to use any other Git command**. All in all typing `git init` adds **.git** to your file making it possible to track changes to it.  
+
+* Now I myself have accidently initialized a file that was not supposed to be initialized.If you want to remove a Git repository that was created on accident then you type in `rm -rf` and at the end of the command you type the file name you want to uninitialize.  
+* If you truly want to delete every single git repository leaving you with an empty workspace you enter `rm -rf .git`.  
+
+Now you are probably sitting there with an initialized file but wondering how to **add** content to your file.   
+1) Write something on a created Readme file you have open.  
+2) Then you will see a circle next to the readme which indicates you have unsaved work. Hit the **command key and S key** in order to save. On the middle left you will see in green text **changes saved**.  
+3) Now if you type `ls` you shouldn't see the file your Readme is in. If you do then type `cd` space and your file name.  
+4) Now you should be able to type `git add` space file name. If you see an error then revert back to step three.   
+* `git add` is like adding people to a photo before you actually take the photo.  
+5) Next type as follow with no spelling mistakes. `git commit -m "Your message here`. In the quotation marks type a brief message in the present tense of what you are saving. For instance if I added a picture to my file then my message is "Add picture to file".
+
+* `git commit -m "Your message here"` is basically taking the picture of the people you decided to add to your photo. Once the photo is taken then everything you decided to add with the command "git add" is saved.  
+
+6) Now go to [GitHub](https://github.com/)  
+
+* Hit settings
+* Click new repository  
+* Create a message for your repository such as "Github-learning"  
+ * If you want you can create a description but it's optional.
+* Choose between public or private. 
+* Hit the check mark that says **initialize this with a Readme**
+* Lastly click **create repository**  
+
+7) Now you want to create a remote. A remote sets up a connection between your private machine and github. This allows for your changes made on your machine to appear on your github website.  
+
+* To add a remote you type `git remote add` and either an origin or url at the end. A remote can take two forms.
+ * It can be the origin of which you are creating the remote which looks like this `git remote add origin https://github.com/user/repo.git`.
+ * A url at the end of a remote is basically copying the url from your page to the end of 'git remote add` but origin makes it so you don't have to keep typing the url if you know you will save your changes to the same place every time. 
+ * The purpose for `git remote add origin` is to allow one to `git push origin master` and `git pull origin master`. To understand what each one does look at **Workflow & Commands**  
+* If you `git remote add origin https://github.com/user/repo.git` and you see (**fatal: remote origin already exists.**) then you tried adding a remote with the same name as an exsiting remote. 
+ * To fix this you can change the name of the new remote, rename your old remote, or delete your old remote. **But be carefull with the last option**.
+
+
+
+
+
+
 
 
 
