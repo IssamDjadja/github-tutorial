@@ -46,6 +46,8 @@ provide shell access.`)
 10) Congrats you created your own SSH key, give yourself some snaps for that. 
 
 ---
+
+
 ## Repository Setup
 The `git init` command creates a brand new git repository. This may be used to transform a known project into a Git repository. This is the very first command you type in **in order to use any other Git command**. All in all typing `git init` adds **.git** to your file making it possible to track changes to it.  
 
