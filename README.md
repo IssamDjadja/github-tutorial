@@ -1,6 +1,6 @@
 # GitHub Tutorial
 
-_by <Issam Djadja>_
+_by Issam Djadja_
 
 ---
 ## Git vs. GitHub
