@@ -6,13 +6,14 @@ _by Issam Djadja_
 ## Git vs. GitHub
 * ###Git
  * On a private machine
- * Has version control which basically holds snapshots (`commits`) of your code. This is essential for saving the code you worked on.
+ * Has version control which basically holds snapshots (`commits`) of your code. This is essential for saving the code you worked on.   
+ * Does not require GitHub
 
 * GitHub
  * Work is done on a private machine, but code is saved on the cloud. Cloud is just a server holding alot of peoples code.
  * It keeps track of your your snapshots (`commits`).
- * Web page where you can publish your git repositories (where your code work history is stored) and collaborate with other people.
-
+ * Web page where you can publish your git repositories (where your code work history is stored) and collaborate with other people.  
+ * Requires Git 
 
 
 ---
