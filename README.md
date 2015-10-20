@@ -79,5 +79,10 @@ Now you are probably sitting there with an initialized file but wondering how to
  * The purpose for `git remote add origin` is to allow one to `git push origin master` and `git pull origin master`. To understand what each one does look at **Workflow & Commands**  
 * If you type `git remote add origin https://github.com/user/repo.git` and you see (**fatal: remote origin already exists.**) then you tried adding a remote with the same name as an exsiting remote. 
  * To fix this you can change the name of the new remote, rename your old remote, or delete your old remote. **But be carefull with the last option**.
+
+
+
+
+
 ---
 ## Workflow & Commands
