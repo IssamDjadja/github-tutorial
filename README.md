@@ -52,17 +52,7 @@ The `git init` command creates a brand new git repository. This may be used to t
 * Now I myself have accidently initialized a file that was not supposed to be initialized.If you want to remove a Git repository that was created on accident then you type in `rm -rf` and at the end of the command you type the **file name** you want to uninitialize.  
 * If you truly want to delete every single git repository leaving you with an **empty workspace** you enter `rm -rf .git`.  
 
-Now you are probably sitting there with an initialized file but wondering how to **add** content to your file.   
-1) Write something on a created Readme file you have open.  
-2) Then you will see a circle next to the readme which indicates you have unsaved work. Hit the **command key and S key** in order to save. On the middle left you will see in green text **changes saved**.  
-3) Now if you type `ls` you shouldn't see the file your Readme is in. If you don't then type `cd` `folder name` of the Readme file.  
-4) Now you should be able to type `git add` `file name`. If you see an error then revert back to step three.   
-* `git add` is like adding people to a photo before you actually take the photo.  
-5) Next type as follows with no spelling mistakes. `git commit -m "Your message here`. In the quotation marks type a brief message in the present tense of what you are saving. For instance if I added a picture to my file then my message is "Add picture to file". It sounds akward and you may be tempted to change it into the paste tense, but don't.
-
-* `git commit -m "Your message here"` is basically taking the picture of the people you decided to add to your photo. Once the photo is taken then everything you decided to add with the command "git add" is saved.  
-
-6) Now go to [GitHub](https://github.com/)  
+1) Now go to [GitHub](https://github.com/)  
 
 * Hit settings
 * Click new repository  
@@ -72,7 +62,7 @@ Now you are probably sitting there with an initialized file but wondering how to
 * Hit the check mark that says **initialize this with a Readme**
 * Lastly click **create repository**  
 
-7) Now you want to create a remote. A remote sets up a connection between your private machine and github. This allows for your changes made on your machine to appear on your github website.  
+2) Now you want to create a remote. A remote sets up a connection between your private machine and github. This allows for your changes made on your machine to appear on your github website.  
 
 * To add a remote you type `git remote add` and either an origin or url at the end. A remote can take two forms.
  * It can be the origin of which you are creating the remote which looks like this `git remote add origin https://github.com/user/repo.git`.
@@ -80,10 +70,39 @@ Now you are probably sitting there with an initialized file but wondering how to
  * The purpose for `git remote add origin` is to allow one to `git push origin master` and `git pull origin master`. To understand what each one does look at **Workflow & Commands**  
 * If you type `git remote add origin https://github.com/user/repo.git` and you see (**fatal: remote origin already exists.**) then you tried adding a remote with the same name as an exsiting remote. 
  * To fix this you can change the name of the new remote, rename your old remote, or delete your old remote. **But be carefull with the last option**.
-
-
-
-
-
 ---
 ## Workflow & Commands
+Now you are probably sitting there with an initialized file but wondering how to **add** content to your file.   
+1) Write something on a created Readme file you have open.  
+2) Then you will see a circle next to the readme which indicates you have unsaved work. Hit the **command key and S key** in order to save. On the middle left you will see in green text **changes saved**.  
+3) Now if you type `ls` you shouldn't see the folder your Readme is in. If you don't then type `cd` `folder name` of the Readme file.  
+4) Now you should be able to type `git add` `file name`. If you see an error then revert back to step three.   
+
+* `git add` is like adding people to a photo before you actually take the photo.  
+
+5) Then type `git status`. 
+
+* You do this so you can verifiy if you have anything **added** or **commited**.  
+
+
+6) Next type as follows with **no spelling mistakes**. `git commit -m "Your message here`. In the quotation marks type a brief message in the present tense of what you are saving. For instance if I added a picture to my file then my message is "Add picture to file". It sounds akward and you may be tempted to change it into the paste tense, but don't.  
+
+* `git commit -m "Your message here"` is basically taking the picture of the people you decided to add to your photo. Once the photo is taken then everything you decided to add with the command `git add` is saved.  
+* You should see something along the lines of this `1 file changed, 4 insertions(+), 3 deletions(-)`.
+
+7) Assuming you made a remote correctly you should be able to push work to your github.
+
+* Type `git push origin master`. 
+ * This basically takes the `commit` you made and sends it directly to your github through the `remote` you created.
+ * You should see some like this  
+```Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 371 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:IssamDjadja/github-tutorial.git
+   82e05ca..251a018  master -> master```.
+
+8) Give yourself a lot of snaps because you did your first push, status, and commit.
+
+
