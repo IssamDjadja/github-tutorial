@@ -107,6 +107,6 @@ Total 3 (delta 1), reused 0 (delta 0)
 To git@github.com:IssamDjadja/github-tutorial.git
    82e05ca..251a018  master -> master```.
 
-8) Give yourself a lot of snaps because you did your first push, status, and commit.
+8) Give yourself a lot of snaps because you did your first `git push`, `git status`, and  `git commit -m ""`.
 
 
