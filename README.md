@@ -51,8 +51,6 @@ provide shell access.`)
 ## Repository Setup
 The `git init` command creates a brand new git repository. This may be used to transform a known project into a Git repository. This is the very first command you type in **in order to use any other Git command**. All in all typing `git init` adds **.git** to your file making it possible to track changes to it.  
 
-* Now I myself have accidently initialized a file that was not supposed to be initialized.If you want to remove a Git repository that was created on accident then you type in `rm -rf` and at the end of the command you type the **file name** you want to uninitialize.  
-* If you truly want to delete every single git repository leaving you with an **empty workspace** you enter `rm -rf .git`.  
 
 1) Now go to [GitHub](https://github.com/)  
 
@@ -108,5 +106,48 @@ To git@github.com:IssamDjadja/github-tutorial.git
    82e05ca..251a018  master -> master```.
 
 8) Give yourself a lot of snaps because you did your first `git push`, `git status`, and  `git commit -m ""`.
+
+
+---
+##Error handling
+
+ * Now I myself have accidently initialized a file that was not supposed to be initialized.If you want to remove a Git repository that was created on accident then you type in `rm -rf` and at the end of the command you type the **file name** you want to uninitialize.  
+ * If you truly want to delete every single git repository leaving you with an **empty workspace** you enter `rm -rf .git`.  
+ 
+---
+
+##Collaboration
+
+ * If you ever want to collaborate with someone or you want to take the code they worked on to learn from. You input `git clone [url]` command with the url of the project you want to replicate.  
+  * `git clone [url]` can also be used for a last resort when the work you have saved on your private machine is deleted. 
+ * **To clone**  
+ 1) Go to the repository you want to clone  
+ 2) Copy the SSH clone url  
+![alt text](http://oi42.tinypic.com/2laznmb.jpg)   
+ 3) Go to your workspace
+
+
+
+
+Now one day you probably cloned someones work. Then tried to make a commit on their work and tried pushing it through your remote only to encounter something like this
+
+
+
+`ERROR: Permission to bmuellerhstat/github-tutorial.git denied to IssamDjadja.`
+`fatal: Could not read from remote repository.`  
+`Please make sure you have the correct access rights`
+`and the repository exists.`
+
+This happened because you used `git clone` but were denied access to push work.
+Instead you could use forking which basically creating a personal copy of someone's work. Forking as a bridge between someone' repository and your personal copy.
+ 
+ **To fork somone's work**:  
+ 1) Go to there github page and click on the repository you want to fork.  
+ 2) On the top right corner hit fork.  
+ ![alt text](https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png)  
+ 3) Then  you will be on your github with their repository, so you go to the **SSH clone url**   
+
+
+
 
 
