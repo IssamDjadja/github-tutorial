@@ -124,30 +124,64 @@ To git@github.com:IssamDjadja/github-tutorial.git
  1) Go to the repository you want to clone  
  2) Copy the SSH clone url  
 ![alt text](http://oi42.tinypic.com/2laznmb.jpg)   
- 3) Go to your workspace
+ 3) Go to your workspace  
+ 4) Input `git clone [url]`.The url should be the **SSH clone url**.  
+ 5) Then you should see something like this  
+```Cloning into 'github-tutorial'...
+remote: Counting objects: 25, done.
+remote: Total 25 (delta 0), reused 0 (delta 0), pack-reused 25
+Receiving objects: 100% (25/25), done.
+Resolving deltas: 100% (6/6), done.
+Checking connectivity... done.```  
 
+ 6) Now pat yourself on the back since you did your first clone. HUZZAH!
 
+Now one day you probably cloned someones work. Then tried to make a commit on their work and tried pushing it through your remote only to encounter something like this  
+```ERROR: Permission to bmuellerhstat/github-tutorial.git denied to IssamDjadja.
+fatal: Could not read from remote repository.` 
+Please make sure you have the correct access rights
+and the repository exists.```
 
-
-Now one day you probably cloned someones work. Then tried to make a commit on their work and tried pushing it through your remote only to encounter something like this
-
-
-
-`ERROR: Permission to bmuellerhstat/github-tutorial.git denied to IssamDjadja.`
-`fatal: Could not read from remote repository.`  
-`Please make sure you have the correct access rights`
-`and the repository exists.`
-
-This happened because you used `git clone` but were denied access to push work.
-Instead you could use forking which basically creating a personal copy of someone's work. Forking as a bridge between someone' repository and your personal copy.
+This happened because you useing `git clone` but were denied access to push work.
+Instead you could use forking which basically creates a personal copy of someone's work. Forking as a bridge between someone's repository and your personal copy.
  
  **To fork somone's work**:  
  1) Go to there github page and click on the repository you want to fork.  
  2) On the top right corner hit fork.  
  ![alt text](https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png)  
- 3) Then  you will be on your github with their repository, so you go to the **SSH clone url**   
+ 3) Then you will be on your github with their repository, so you go to the **SSH clone url**.     
+ 4) Copy it and go to your workspace.
+ 5) Now enter `git clone [urls]` with the url being the copied SSH key from step 3.  
+ 6) With the clone made try adding, commiting and pushing to your gihub.  
+ 7) If you did everything right then changes should be pushed to your forked repository on github.
+ 8) High five, you just forked and made changes to it.
+ 
+ 
+ 
+ 
+ Remember the first Readme file you ever made. Lets try something crazy with it. Type `rm -rf`  and the file name (in this case Readme) at the end of the command without any questions.  
+ If you listned to me then that selected file has been deleted.  
+ Don't yell at me just yet, unless you don't have a copy on the cloud then you can yell.  
+ If not type `git pull origin master`.
+ 
+* You should see your work back.
+ * `Git pull` is taking the file from your cloud and bringing it to yor local machine. Pretty much the exact opposite of `git push`.
 
+But what if you wanted the creator to see the changes you made for the forked repository you made early. But wait, early I told you that you can't push work to the creator unless it's yours.
 
+* Yes thats true, but you can make **pull requests**.
+  * A **pull requests** is asking permission from the oringial creator of your forked repository to see changes you made.
+ 
+To make a pull request:  
+1) Go to the repository you forked
+2) Click **compare and pull request**   
+ ![alt text](http://i.stack.imgur.com/8jEby.png)  
+3) Next add a description of the changes you want the oringial creator to notice and click **create pull request**  
+ ![alt text](https://help.github.com/assets/images/help/pull_requests/pull-request-click-to-create.png)  
+
+4) Now you have sent your very first pull request, Give yourself a lot of snaps.
+
+* Note don't be discouraged if the changes you made are not added. The creator has the right to reject your request even though you thought it was a good change.
 
 
 
