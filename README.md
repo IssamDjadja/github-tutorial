@@ -170,7 +170,7 @@ Instead you could use forking which basically creates a personal copy of someone
 But what if you wanted the creator to see the changes you made for the forked repository you made early. But wait, early I told you that you can't push work to the creator unless it's yours.
 
 * Yes thats true, but you can make **pull requests**.
-  * A **pull requests** is asking permission from the oringial creator of your forked repository to see changes you made.
+  * A **pull requests** is asking permission from the original creator of your forked repository to see changes you made.
  
 To make a pull request:  
 1) Go to the repository you forked
