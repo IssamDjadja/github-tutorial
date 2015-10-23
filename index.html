@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>GitHub-tutorial by IssamDjadja</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/IssamDjadja/github-tutorial">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>GitHub-tutorial</h1>
+            <h2>The ways of Github</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/IssamDjadja/github-tutorial/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/IssamDjadja/github-tutorial/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="github-tutorial" class="anchor" href="#github-tutorial" aria-hidden="true"><span class="octicon octicon-link"></span></a>GitHub Tutorial</h1>
+
+<p><em>by Issam Djadja</em></p>
+
+<hr>
+
+<h2>
+<a id="git-vs-github" class="anchor" href="#git-vs-github" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git vs. GitHub</h2>
+
+<ul>
+<li>
+<h3>
+<a id="git" class="anchor" href="#git" aria-hidden="true"><span class="octicon octicon-link"></span></a>Git</h3>
+
+<ul>
+<li>On a private machine</li>
+<li>Has version control which basically holds snapshots (<code>commits</code>) of your code. This is essential for saving the code you worked on.<br>
+</li>
+<li>Does not require GitHub</li>
+</ul>
+</li>
+<li>
+<p>GitHub</p>
+
+<ul>
+<li>Work is done on a private machine, but code is saved on the cloud. Cloud is just a server holding alot of peoples code.</li>
+<li>It keeps track of your your snapshots (<code>commits</code>).</li>
+<li>Web page where you can publish your git repositories (where your code work history is stored) and collaborate with other people.<br>
+</li>
+<li>Requires Git </li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="initial-setup" class="anchor" href="#initial-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Initial Setup</h2>
+
+<p>In order to setup git on your workspace their needs to be a few steps you must follow.<br>
+1) First, you have to tell Git your name so all your <code>commits</code> (snapshots) are labled properly. So you type <code>git config --global user.name "YOUR NAME"</code>. This must be typed with no spelling errors and replace <strong>YOUR NAME</strong> with your name.<br>
+2) Next Git needs to know your email address associated with the commits you make. Typing <code>git config --global user.email "YOUR EMAIL ADDRESS"</code> would do just that. Replace <strong>YOUR EMAIL ADDRESS</strong> with your email.<br>
+3) Now go to <a href="https://github.com/">GitHub</a> and create an account.<br>
+4) After make an account in <a href="https://c9.io/web/sign-up/free">Cloud9</a><br>
+5) Next on your new cloud9 account create a new workspace.<br>
+6) On the nexwly created workspace copy and paste this into it <code>ssh-keygen -t rsa -b 4096 -C "your_email@example.com"</code> be sure to follow the steps given to you after you pasted the code and hit enter.<br>
+7) Then you go back to your GitHub account </p>
+
+<ul>
+<li>Hit the <strong>settings</strong> icon on the top right corner </li>
+<li>Click on <strong>SSH keys</strong> </li>
+<li>Click <strong>add SSH Key</strong>
+</li>
+<li>On the tile field add the description. For instance you may call it "PersonalHP computer"</li>
+<li>Paste your given key into "key field"</li>
+<li>Click <strong>Add key</strong>
+</li>
+<li>Conforim action with your <strong>GitHub password</strong> you created earlier.<br>
+</li>
+</ul>
+
+<p>8) Next test the connection with the command <code>ssh -T git@github.com</code>  </p>
+
+<ul>
+<li>Dont freak out but this warning will be seen <code>The authenticity of host 'github.com (207.97.227.239)' can't be established.
+RSA key fingerprint is 16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48.
+Are you sure you want to continue connecting (yes/no)?</code> just type <strong>yes</strong>.<br>
+</li>
+</ul>
+
+<p>9) Then you will witness (<code>Hi username! You've successfully authenticated, but GitHub does not
+provide shell access.</code>)<br>
+10) Congrats you created your own SSH key, give yourself some snaps for that. </p>
+
+<hr>
+
+<h2>
+<a id="repository-setup" class="anchor" href="#repository-setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Repository Setup</h2>
+
+<p>The <code>git init</code> command creates a brand new git repository. This may be used to transform a known project into a Git repository. This is the very first command you type in <strong>in order to use any other Git command</strong>. All in all typing <code>git init</code> adds <strong>.git</strong> to your file making it possible to track changes to it.  </p>
+
+<p>1) Now go to <a href="https://github.com/">GitHub</a>  </p>
+
+<ul>
+<li>Hit settings</li>
+<li>Click new repository<br>
+</li>
+<li>Create a message for your repository such as "Github-learning"<br>
+
+<ul>
+<li>If you want you can create a description but it's optional.</li>
+</ul>
+</li>
+<li>Choose between public or private. </li>
+<li>Hit the check mark that says <strong>initialize this with a Readme</strong>
+</li>
+<li>Lastly click <strong>create repository</strong><br>
+</li>
+</ul>
+
+<p>2) Now you want to create a remote. A remote sets up a connection between your private machine and github. This allows for your changes made on your machine to appear on your github website.  </p>
+
+<ul>
+<li>To add a remote you type <code>git remote add</code> and either an origin or url at the end. A remote can take two forms.
+
+<ul>
+<li>It can be the origin of which you are creating the remote which looks like this <code>git remote add origin https://github.com/user/repo.git</code>.</li>
+<li>A url at the end of a remote is basically copying the url from your page to the end of <code>git remote add</code> but origin makes it so you don't have to keep typing the url if you know you will save your changes to the same place every time. </li>
+<li>The purpose for <code>git remote add origin</code> is to allow one to <code>git push origin master</code> and <code>git pull origin master</code>. To understand what each one does look at <strong>Workflow &amp; Commands</strong><br>
+</li>
+</ul>
+</li>
+<li>If you type <code>git remote add origin https://github.com/user/repo.git</code> and you see (<strong>fatal: remote origin already exists.</strong>) then you tried adding a remote with the same name as an exsiting remote. 
+
+<ul>
+<li>To fix this you can change the name of the new remote, rename your old remote, or delete your old remote. <strong>But be carefull with the last option</strong>.</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="workflow--commands" class="anchor" href="#workflow--commands" aria-hidden="true"><span class="octicon octicon-link"></span></a>Workflow &amp; Commands</h2>
+
+<p>Now you are probably sitting there with an initialized file but wondering how to <strong>add</strong> content to your file.<br>
+1) Write something on a created Readme file you have open.<br>
+2) Then you will see a circle next to the readme which indicates you have unsaved work. Hit the <strong>command key and S key</strong> in order to save. On the middle left you will see in green text <strong>changes saved</strong>.<br>
+3) Now if you type <code>ls</code> you shouldn't see the folder your Readme is in. If you don't then type <code>cd</code> <code>folder name</code> of the Readme file.<br>
+4) Now you should be able to type <code>git add</code> <code>file name</code>. If you see an error then revert back to step three.   </p>
+
+<ul>
+<li>
+<code>git add</code> is like adding people to a photo before you actually take the photo.<br>
+</li>
+</ul>
+
+<p>5) Then type <code>git status</code>. </p>
+
+<ul>
+<li>You do this so you can verifiy if you have anything <strong>added</strong> or <strong>commited</strong>.<br>
+</li>
+</ul>
+
+<p>6) Next type as follows with <strong>no spelling mistakes</strong>. <code>git commit -m "Your message here</code>. In the quotation marks type a brief message in the present tense of what you are saving. For instance if I added a picture to my file then my message is "Add picture to file". It sounds akward and you may be tempted to change it into the paste tense, but don't.  </p>
+
+<ul>
+<li>
+<code>git commit -m "Your message here"</code> is basically taking the picture of the people you decided to add to your photo. Once the photo is taken then everything you decided to add with the command <code>git add</code> is saved.<br>
+</li>
+<li>You should see something along the lines of this <code>1 file changed, 4 insertions(+), 3 deletions(-)</code>.</li>
+</ul>
+
+<p>7) Assuming you made a remote correctly you should be able to push work to your github.</p>
+
+<ul>
+<li>Type <code>git push origin master</code>. 
+
+<ul>
+<li>This basically takes the <code>commit</code> you made and sends it directly to your github through the <code>remote</code> you created.</li>
+<li>You should see some like this<br>
+<code>Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 371 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To git@github.com:IssamDjadja/github-tutorial.git
+82e05ca..251a018  master -&gt; master</code>.</li>
+</ul>
+</li>
+</ul>
+
+<p>8) Give yourself a lot of snaps because you did your first <code>git push</code>, <code>git status</code>, and  <code>git commit -m ""</code>.</p>
+
+<hr>
+
+<h2>
+<a id="error-handling" class="anchor" href="#error-handling" aria-hidden="true"><span class="octicon octicon-link"></span></a>Error handling</h2>
+
+<ul>
+<li>Now I myself have accidently initialized a file that was not supposed to be initialized.If you want to remove a Git repository that was created on accident then you type in <code>rm -rf</code> and at the end of the command you type the <strong>file name</strong> you want to uninitialize.<br>
+</li>
+<li>If you truly want to delete every single git repository leaving you with an <strong>empty workspace</strong> you enter <code>rm -rf .git</code>.<br>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="collaboration" class="anchor" href="#collaboration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Collaboration</h2>
+
+<ul>
+<li>If you ever want to collaborate with someone or you want to take the code they worked on to learn from. You input <code>git clone [url]</code> command with the url of the project you want to replicate.<br>
+
+<ul>
+<li>
+<code>git clone [url]</code> can also be used for a last resort when the work you have saved on your private machine is deleted. </li>
+</ul>
+</li>
+<li>
+<p><strong>To clone</strong><br>
+1) Go to the repository you want to clone<br>
+2) Copy the SSH clone url<br>
+<img src="http://oi42.tinypic.com/2laznmb.jpg" alt="alt text"><br>
+3) Go to your workspace<br>
+4) Input <code>git clone [url]</code>.The url should be the <strong>SSH clone url</strong>.<br>
+5) Then you should see something like this<br>
+<code>Cloning into 'github-tutorial'...
+remote: Counting objects: 25, done.
+remote: Total 25 (delta 0), reused 0 (delta 0), pack-reused 25
+Receiving objects: 100% (25/25), done.
+Resolving deltas: 100% (6/6), done.
+Checking connectivity... done.</code>  </p>
+
+<p>6) Now pat yourself on the back since you did your first clone. HUZZAH!</p>
+</li>
+</ul>
+
+<p>Now one day you probably cloned someones work. Then tried to make a commit on their work and tried pushing it through your remote only to encounter something like this<br>
+<code>ERROR: Permission to bmuellerhstat/github-tutorial.git denied to IssamDjadja.
+fatal: Could not read from remote repository.` 
+Please make sure you have the correct access rights
+and the repository exists.</code></p>
+
+<p>This happened because you useing <code>git clone</code> but were denied access to push work.
+Instead you could use forking which basically creates a personal copy of someone's work. Forking as a bridge between someone's repository and your personal copy.</p>
+
+<p><strong>To fork somone's work</strong>:<br>
+ 1) Go to there github page and click on the repository you want to fork.<br>
+ 2) On the top right corner hit fork.<br>
+ <img src="https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png" alt="alt text"><br>
+ 3) Then you will be on your github with their repository, so you go to the <strong>SSH clone url</strong>.<br>
+ 4) Copy it and go to your workspace.
+ 5) Now enter <code>git clone [urls]</code> with the url being the copied SSH key from step 3.<br>
+ 6) With the clone made try adding, commiting and pushing to your gihub.<br>
+ 7) If you did everything right then changes should be pushed to your forked repository on github.
+ 8) High five, you just forked and made changes to it.</p>
+
+<p>Remember the first Readme file you ever made. Lets try something crazy with it. Type <code>rm -rf</code>  and the file name (in this case Readme) at the end of the command without any questions.<br>
+ If you listned to me then that selected file has been deleted.<br>
+ Don't yell at me just yet, unless you don't have a copy on the cloud then you can yell.<br>
+ If not type <code>git pull origin master</code>.</p>
+
+<ul>
+<li>You should see your work back.
+
+<ul>
+<li>
+<code>Git pull</code> is taking the file from your cloud and bringing it to yor local machine. Pretty much the exact opposite of <code>git push</code>.</li>
+</ul>
+</li>
+</ul>
+
+<p>But what if you wanted the creator to see the changes you made for the forked repository you made early. But wait, early I told you that you can't push work to the creator unless it's yours.</p>
+
+<ul>
+<li>Yes thats true, but you can make <strong>pull requests</strong>.
+
+<ul>
+<li>A <strong>pull requests</strong> is asking permission from the original creator of your forked repository to see changes you made.</li>
+</ul>
+</li>
+</ul>
+
+<p>To make a pull request:<br>
+1) Go to the repository you forked
+2) Click <strong>compare and pull request</strong><br>
+ <img src="http://i.stack.imgur.com/8jEby.png" alt="alt text"><br>
+3) Next add a description of the changes you want the oringial creator to notice and click <strong>create pull request</strong><br>
+ <img src="https://help.github.com/assets/images/help/pull_requests/pull-request-click-to-create.png" alt="alt text">  </p>
+
+<p>4) Now you have sent your very first pull request, Give yourself a lot of snaps.</p>
+
+<ul>
+<li>Note don't be discouraged if the changes you made are not added. The creator has the right to reject your request even though you thought it was a good change.</li>
+</ul>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/IssamDjadja">IssamDjadja</a> can be found on <a href="https://github.com/IssamDjadja/github-tutorial">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
